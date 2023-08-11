@@ -1,0 +1,192 @@
+@font-face {
+    font-family: D-DIN-Bold;
+    src: url(fonts/D-DIN/D-DIN-Bold.otf);
+}
+@font-face {
+    font-family: D-DIN-Regular;
+    src: url(fonts/D-DIN/D-DIN.otf);
+}
+
+body{
+    background-color: black;
+    color: white;
+    margin:0;
+    font-family: D-DIN-Bold, Arial, Verdana, sans-serif;
+}
+a{
+    color:white;
+}
+svg{
+    fill: white;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 50px;
+    max-width: 1400px;
+    margin: 0 auto;
+    height: 55px;
+    position: fixed;
+    top: 0;
+    z-index: 1; 
+}
+header svg{
+    width: 140px;
+}
+header a.logo{
+    position: fixed;
+    top: 20px;
+    left: 30%;
+    margin-left: -70px;
+}
+@media(min-width:1000px){
+    header svg{
+        width: 190px;
+    }
+    header a.logo{
+        margin-right: 25px;
+        position: relative;
+        top: initial;
+        left: initial;
+        margin-left: initial;
+    } 
+}
+.center-nav{
+    display: none;
+}
+@media(min-width:1000px){
+    .center-nav{
+        display: block;
+    }
+}
+.center-nav a, .right-nav a{
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 12px;
+    padding: 0;
+    margin: 0 13px;
+    position: relative;
+}
+.center-nav a:before, .right-nav a:before{
+    content: '';
+    width: 0;
+    right: 0;
+    bottom: -3px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    transition: width .2s linear;
+}
+.center-nav a:hover:before, .right-nav a:hover:before{
+    right: initial;
+    left: 0;
+    width: 100%;
+}
+.right-nav{
+    position: fixed;
+    right: 30px;
+    top: 20px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+.right-nav a{
+    display: none;
+}
+@media(min-width:1000px){
+    .right-nav a{
+        display: inline-block;
+        padding: 0;
+        margin: 0 50px;
+    }  
+}
+.hamburger{
+    position: absolute;
+    right: 0;
+    top: 17px;
+    color: white;
+    background-color: transparent;
+    border: 0;
+    transform: rotate(90deg);
+    cursor: pointer;
+}
+section{
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative
+}
+section div.content{
+    position: absolute;
+    bottom: 15%;
+    left: 50px;
+    max-width: 500px;
+}
+section div.content h2{
+    font-size: 45px;
+    margin: 0;
+    margin-bottom: 0;
+}
+section div.content h3{
+    font-family: D-DIN-Regular, Arial, Verdana, sans-serif;
+    font-size: 18px;
+    font-weight: 100;
+    margin: 0 0 5px;
+}
+section div.content a{
+    border: 1.5px solid white;
+    display: inline-block;
+    padding: 15px 45px;
+    font-size: small;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-top: 30px;
+    position: relative;
+}
+section div.content a:before{
+    content: '';
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    transition: height 0.3s ease-in-out;
+    background-color: white;
+}
+section div.content a:hover:before{
+    height: 100%;
+    top: initial;
+    bottom: 0;
+}
+section div.content a span{
+    position: relative;
+    z-index: 1;
+    transition: color .3s ease-in-out;
+}
+section div.content a:hover span{
+    color: black;
+}
+footer{
+    padding: 40px;
+    font-size: 10px;
+    font-family: D-DIN-Regular, Arial, Verdana, sans-serif;
+}
+footer nav{
+    text-align: center;
+}
+footer nav span{
+    display: inline-block;
+    padding-right: 30px;
+    
+}
+footer nav a{
+    padding: 0 20px;
+    text-decoration: none;
+    transition: color 0.2s linear;
+}
+footer nav a:hover{
+    color: #aaa;
+}
